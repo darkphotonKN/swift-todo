@@ -12,10 +12,14 @@ struct ToDoTextFieldView: View {
     var label: String;
     @Binding var text: String;
     var padding: CGFloat;
+    var height: CGFloat?;
     
     
     var body: some View {
-        TextField(label, text: $text).padding(padding);
-        
+        TextField(label, text: $text).frame(height: height).padding(padding);
     }
 }
+
+
+
+
